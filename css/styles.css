@@ -1,0 +1,121 @@
+:root {
+  /* COLORES DE FRONTEND MENTOR */
+  --desaturated-red: hsl(0, 36%, 70%);
+  --soft-red: hsl(0, 93%, 68%); /* para borde y texto validación */
+
+  --text-light: hsl(357, 29%, 70%);
+  --text-bold: hsl(0, 6%, 24%);
+
+  /* Gradients 
+      linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%)); BODY CLARITO
+      linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%)); BOTÓN FLECHA SUBMIT
+      linear-gradient(135deg, #fbdada, #f8bfbf); HOVER FLECHA SUBMIT    
+  */
+
+  /* SHADOWS  gracias Alejandro Ayala he tomado sus shadows de su maravilloso repo!! 
+  email / form
+  box-shadow: inset 0 0 0 1px var(--desaturated-red);
+
+  email invalid 
+  box-shadow: inset 0 0 0 2px var(--soft-red);
+
+  submit 
+  box-shadow: 0 9px 27px -5px var(--desaturated-red);
+
+  */
+}
+
+body {
+  margin: 0;
+  font-family: 'Josefin Sans', sans-serif;
+  background-color: #666;
+  padding-bottom: 50px;
+}
+
+.header {
+  padding: 25px;
+}
+
+.picture {
+  display: block;
+  margin-bottom: 75px;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 10px;
+  color: var(--text-bold);
+}
+
+.title__span {
+  display: block;
+  font-weight: 300;
+  color: var(--desaturated-red);
+}
+
+.text {
+  text-align: center;
+  padding: 0 15px;
+  color: var(--desaturated-red);
+  line-height: 1.5;
+}
+
+.form {
+  text-align: center;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.form--error::after {
+  content: url(/assets/images/icon-error.svg);
+  position: absolute;
+  right: 90px;
+}
+
+.form--error::before {
+  content: 'Please provide a valid email';
+  position: absolute;
+  bottom: -25px;
+  left: 15px;
+  color: var(--soft-red);
+}
+
+.form__input {
+  width: 100%;
+  background: transparent;
+  outline: none;
+  border: 1px solid var(--text-bold);
+  height: 50px;
+  border-radius: 30px;
+  padding-left: 25px;
+  color: var(--desaturated-red);
+  font-size: 1.2rem;
+}
+
+::placeholder {
+  color: var(--desaturated-red);
+  font-size: 1.2rem;
+}
+
+.form__submit {
+  position: absolute;
+  right: 1px;
+  width: 75px;
+  height: 100%;
+  border-radius: 30px;
+  border: none;
+  background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  box-shadow: 0 9px 27px -5px var(--desaturated-red);
+}
+
+.form__submit::after {
+  content: url(/assets/images/icon-arrow.svg);
+  font-size: 2rem;
+}
